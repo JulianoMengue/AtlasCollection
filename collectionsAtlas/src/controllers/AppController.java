@@ -46,7 +46,7 @@ public class AppController implements Initializable {
 	@SuppressWarnings({ "resource" })
 	public void getCollection() {
 		MongoClientURI uri = new MongoClientURI(
-				"mongodb+srv://bananastaut:020881Banana@bananacluster.gzaux.mongodb.net/<BananaDatabase>?retryWrites=true&w=majority");
+				"mongodb+srv://bananastaut:""@bananacluster.gzaux.mongodb.net/<>?retryWrites=true&w=majority");
 		MongoClient mongoClient = new MongoClient(uri);
 		MongoDatabase dataBase = mongoClient.getDatabase("BananaDatabase");
 		AtlasCollectionClass acc = null;
@@ -79,7 +79,7 @@ public class AppController implements Initializable {
 	@SuppressWarnings("resource")
 	public static MongoCollection<Document> getConnection(String collectionName) {
 		MongoClientURI uri = new MongoClientURI(
-				"mongodb+srv://bananastaut:020881Banana@bananacluster.gzaux.mongodb.net/<BananaDatabase>?retryWrites=true&w=majority");
+				"mongodb+srv://bananastaut:""@bananacluster.gzaux.mongodb.net/<>?retryWrites=true&w=majority");
 		MongoClient mongoClient = new MongoClient(uri);
 		MongoCollection<Document> collection = mongoClient.getDatabase("BananaDatabase").getCollection(collectionName);
 		return collection;
